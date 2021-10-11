@@ -15,17 +15,16 @@
 body {
     display: flex;
     align-items: center;
+    height: 100vh;
     font-size: 1rem;
     font-family: 'Be Vietnam Pro', sans-serif;
+    letter-spacing: 1;
     line-height: 1.5;
-    letter-spacing: 1px;
-    color: #606162;
     color: #606162;
     background-color: #83a2a6;
-    height: 100vh;
 }
 
-ul li {
+ul li  {
     list-style: none;
 }
 
@@ -41,8 +40,8 @@ img {
     margin-right: auto;
     padding: 23px;
     width: calc(100% - 2rem);
-    background-color: #fff;
     border-radius: 1rem;
+    background-color: #fff;
 }
 
 .container > div {
@@ -70,35 +69,20 @@ img {
     justify-content: space-between;
 }
 
-.container .header {
+.container .header img {
     width: 50px;
     height: 50px;
-    border: 5rem;
+    border-radius: 5rem;
 }
 
-.container .header #txt-string {
+.container .header #txtString {
     width: 60%;
     padding: .875rem;
     border-radius: .750rem;
-    border-radius: 2.5px solid #d4b8a6;
+    border: 2.5px solid #d4b8a6;
 }
 
-.container .list #todo-list {
-    margin-top: 1.5rem;
-    display: grid;
-    row-gap: 1rem;
-}
-
-.container .list #todo-list li {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #d4b8a6;
-    align-items: center;
-}
-
-
-.container .header .btn-submit {
+.container .header #btnSubmit {
     padding: 1rem;
     margin-left: 1rem;
     border: none;
@@ -106,9 +90,24 @@ img {
     color: #fff;
     font-weight: 600;
     cursor: pointer;
+    background-color: #d4b8a6;
 }
 
-.container .list #todo-list #btn-remove {
+.container .list #todoList {
+    margin-top: 1.5rem;
+    display: grid;
+    row-gap: 1rem;
+}
+
+.container .list #todoList li {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #d4b8a6;
+    align-items: center;
+}
+
+.container .list #todoList #btnRemove {
     padding: 6px;
     border-radius: 3px;
     border: none;
@@ -118,7 +117,7 @@ img {
     background-color: #d4b8a6;
 }
 
-@media (max-width : 500px) and (min-width: 0px) {
+@media (max-width : 560px) and (min-width: 0px) {
     body {
         padding: 1rem;
         overflow: hidden;
@@ -128,7 +127,7 @@ img {
         border-radius: 1rem;
     }
 
-    .container form {
+    .container form{
         display: flex;
     }
 
