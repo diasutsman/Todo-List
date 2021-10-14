@@ -82,6 +82,18 @@ img {
     border: 2.5px solid #d4b8a6;
 }
 
+#editString {
+    width: 60%;
+    padding: .27rem;
+    height: 20px;
+    border-radius: .750rem;
+    border: 2.5px solid #d4b8a6;
+}
+
+/*#todoEdit {
+    position: absolute;
+}*/
+
 .container .header #btnSubmit {
     padding: 1rem;
     margin-left: 1rem;
@@ -107,7 +119,11 @@ img {
     align-items: center;
 }
 
-.container .list #todoList #btnRemove {
+.container .list #todoList li div {
+    padding-left: 10px;
+}
+
+.container .list #todoList #btnRemove , .container .list #todoList #btnEdit, .container .list #todoList #btnSave , .container .list #todoList #btnCancel {
     padding: 6px;
     border-radius: 3px;
     border: none;
@@ -115,6 +131,7 @@ img {
     font-weight: 600;
     cursor: pointer;
     background-color: #d4b8a6;
+    
 }
 
 @media (max-width : 560px) and (min-width: 0px) {
