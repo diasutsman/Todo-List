@@ -10,6 +10,20 @@ const isDuplicate = (todo) => [...document.querySelectorAll('#todoList li span')
 
 const capitilize = (s) => s[0].toUpperCase() + s.substring(1).toLowerCase()
 
+const resetButtonStyle = () => {
+    document.querySelectorAll('#btnEdit').forEach(e => {e.style.filter = '';e.style.opacity = '1';e.style.cursor = 'pointer'})
+    document.querySelectorAll('#btnRemove').forEach(e => {e.style.filter = '';e.style.opacity = '1';e.style.cursor = 'pointer'})
+    editOpen = false
+    canDelete = true
+}
+
+const disabledButtonStyle = () => {
+    document.querySelectorAll('#btnEdit').forEach(e => {e.style.filter = 'grayscale(500%)';e.style.opacity = '.5';e.style.cursor = 'default'})
+    document.querySelectorAll('#btnRemove').forEach(e => {e.style.filter = 'grayscale(500%)';e.style.opacity = '.5';e.style.cursor = 'default'})
+    editOpen = true
+    canDelete = false
+}
+
 // prevent the submit button to submit and reload the page
 create.addEventListener('submit', (e) => e.preventDefault())
 //document.getElementById('todoEdit').addEventListener('submit', (e) => e.preventDefault())
@@ -45,10 +59,7 @@ display.addEventListener('click', (e) => {
                 <input type="button" id="btnCancel" value="Cancel">
             </div>
         `
-        document.querySelectorAll('#btnEdit').forEach(e => {e.style.filter = 'grayscale(500%)';e.style.opacity = '.5';e.style.cursor = 'default'})
-        document.querySelectorAll('#btnRemove').forEach(e => {e.style.filter = 'grayscale(500%)';e.style.opacity = '.5';e.style.cursor = 'default'})
-        editOpen = true
-        canDelete = false
+        disabledButtonStyle()
     }
 
     // (Save Button)
@@ -61,10 +72,7 @@ display.addEventListener('click', (e) => {
                 <input type="button" id="btnRemove" value="Delete">
             </div>
         ` 
-        document.querySelectorAll('#btnEdit').forEach(e => {e.style.filter = '';e.style.opacity = '1';e.style.cursor = 'pointer'})
-        document.querySelectorAll('#btnRemove').forEach(e => {e.style.filter = '';e.style.opacity = '1';e.style.cursor = 'pointer'})
-        editOpen = false
-        canDelete = true
+        resetButtonStyle()
     }
 
     // (Cancel button)
@@ -76,9 +84,6 @@ display.addEventListener('click', (e) => {
                 <input type="button" id="btnRemove" value="Delete">
             </div>
         `
-        document.querySelectorAll('#btnEdit').forEach(e => {e.style.filter = '';e.style.opacity = '1';e.style.cursor = 'pointer'})
-        document.querySelectorAll('#btnRemove').forEach(e => {e.style.filter = '';e.style.opacity = '1';e.style.cursor = 'pointer'})
-        editOpen = false
-        canDelete = true
+        resetButtonStyle()
     }
 })
