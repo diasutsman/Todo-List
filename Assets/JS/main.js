@@ -61,8 +61,8 @@ display.addEventListener('click', (e) => {
                 <input type="button" id="btnRemove" value="Delete">
             </div>
         ` 
-        document.querySelectorAll('#btnEdit').forEach(e => {e.style.filter = '';e.style.opacity = '';e.style.cursor = 'pointer'})
-        document.querySelectorAll('#btnRemove').forEach(e => {e.style.filter = '';e.style.opacity = '';e.style.cursor = 'pointer'})
+        document.querySelectorAll('#btnEdit').forEach(e => {e.style.filter = '';e.style.opacity = '1';e.style.cursor = 'pointer'})
+        document.querySelectorAll('#btnRemove').forEach(e => {e.style.filter = '';e.style.opacity = '1';e.style.cursor = 'pointer'})
         editOpen = false
         canDelete = true
     }
@@ -76,8 +76,8 @@ display.addEventListener('click', (e) => {
                 <input type="button" id="btnRemove" value="Delete">
             </div>
         `
-        document.querySelectorAll('#btnEdit').forEach(e => {e.style.filter = '';e.style.opacity = '';e.style.cursor = 'pointer'})
-        document.querySelectorAll('#btnRemove').forEach(e => {e.style.filter = '';e.style.opacity = '';e.style.cursor = 'pointer'})
+        document.querySelectorAll('#btnEdit').forEach(e => {e.style.filter = '';e.style.opacity = '1';e.style.cursor = 'pointer'})
+        document.querySelectorAll('#btnRemove').forEach(e => {e.style.filter = '';e.style.opacity = '1';e.style.cursor = 'pointer'})
         editOpen = false
         canDelete = true
     }
